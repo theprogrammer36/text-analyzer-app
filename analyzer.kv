@@ -4,11 +4,12 @@ Interface:
     spacing:dp(20)
 
     Label:
-        text: "Sentiment Analyzer"
+        text: "Sentiment Analyzer by Thousif"
         size_hint_y:None
         height:dp(50)
 
     TextInput:
+        id: textInput
         size_hint:1,0.6
 
     BoxLayout:
@@ -16,9 +17,11 @@ Interface:
         spacing:dp(20)
         Button:
             text: "Analyzer"
+            on_press:root.analyze()
         Button:
             text: "Clear"
 
     Label:
+        id: label
         size_hint: 1,0.3
         text: "Result"
